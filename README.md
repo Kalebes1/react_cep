@@ -22,4 +22,4 @@ Essa biblioteca foi utilizada para o consumo da API.
 ### Para rodar o projeto
 `npm run dev`
 
-### [Clique aqui para ver o projeto](https://react-gym-three.vercel.app)
+### [Clique aqui para ver o projeto](https://buscador-de-cep-omega.vercel.app/)
