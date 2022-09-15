@@ -20,7 +20,6 @@ export const Home = () => {
 
       const {register, handleSubmit} = useForm();
     
-      console.log(cepNumber)
     useEffect(()=>{
       if(cepNumber){
         loadCEP()
@@ -33,9 +32,12 @@ export const Home = () => {
     }
 
     const loadCEP = async () => {
+
+      
         const cep = await api.getCEP(cepNumber);
-        setList(cep)
-       
+
+          setList(cep)      
+
     }
     
   return (
@@ -48,7 +50,7 @@ export const Home = () => {
               <div>
                 <label>
                   <span>Digite o CEP: </span>
-                    <input type="string" {...register("cep")} id="" placeholder="ex.: 72911298"/>
+                    <input type="string" minLength={8} maxLength={8} {...register("cep")} id="" placeholder="ex.: 72911298"/>
                 </label>
                   <button value="enviar">Enviar</button>
               </div>
@@ -57,11 +59,21 @@ export const Home = () => {
 
          <div className="right-side">
            
+                
+                { list.cep &&
+                  <div>
                   <p>Bairro: <span>{list.bairro}</span></p>
-                  <p>Localidade: <span>{list.localidade}</span></p>
-                  <p>Logradouro: <span>{list.logradouro}</span></p>
-                  <p>DDD: <span>{list.ddd}</span>
-                  </p>
+                    <p>Localidade: <span>{list.localidade}</span></p>
+                    <p>Logradouro: <span>{list.logradouro}</span></p>
+                    <p>DDD: <span>{list.ddd}</span>
+                    </p>
+                </div>
+                }
+                {
+                  list.cep != '' && !list.cep &&
+                  <p>CEP NÃO ENCONTRADO. TENTE NOVAMENTE!</p>
+                }
+                  
 
          </div>
         </div>

@@ -52,14 +52,14 @@
 
 /*=======    right-side    ======= */
 
-.right-side > p{
+.right-side p{
    padding: 0.5rem 0;
    font-size: 1rem;
 
    
    color: var(--secondColor);
 }
-.right-side > p > span{
+.right-side  p  span{
     font-weight: 700;
 }
 

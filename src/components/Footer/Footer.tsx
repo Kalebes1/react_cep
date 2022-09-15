@@ -21,7 +21,7 @@ const Footer = () => {
                 <h3>
                     ACESSE O CÓDIGO EM:
                 </h3>
-                <a href=""><AiFillGithub/></a>
+                <a href="https://github.com/Kalebes1/react_cep"><AiFillGithub/></a>
 
             </div>
         </article>

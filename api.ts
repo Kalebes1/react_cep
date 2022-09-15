@@ -6,7 +6,8 @@ const request = axios.create({
 
 export const api = {
     getCEP:async (id: string) => {
-        const req = await request(`/${id}/json/`);
-        return req.data
+            const req = await request(`/${id}/json/`);
+            return req.data
+        
     }
 }
