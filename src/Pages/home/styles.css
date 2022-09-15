@@ -1,0 +1,101 @@
+.h-container{
+    padding: 10rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15rem;
+}
+
+
+/*=======    left-side    ======= */
+
+.left-side form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+.left-side  span{
+    font-size: 1rem;
+    color: var(--secondColor);
+}
+
+.left-side form input {
+    width: 100%;
+    border-bottom: 2px solid rgba(150, 163, 171, .5);
+    padding: 20px 30px;
+    border-radius: 1.5rem;
+    margin: 1rem 0;
+    font-size: 14px;
+    outline: unset;
+    
+}
+.left-side button {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all  0.2s ease-in;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--secondColor);
+}
+
+.left-side button:hover{
+    background-color: var(--hoverColor);
+    color: var(--textColor);
+    transform: scale(1.1);
+}
+
+
+
+
+
+/*=======    right-side    ======= */
+
+.right-side > p{
+   padding: 0.5rem 0;
+   font-size: 1rem;
+
+   
+   color: var(--secondColor);
+}
+.right-side > p > span{
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+/*  MEDIA QUERIES (medium screens) */
+
+@media screen and (max-width: 1024px){
+
+    .h-container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+
+    .left-side form label{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-side form input{
+        width: 70%;
+        margin: 1rem auto;
+    }
+
+}   
+
+
+
+
+/*  MEDIA QUERIES (small screens) */
+@media screen and (max-width:600px) {
+    .h-container{
+        padding: 10rem 0;
+    }
+}

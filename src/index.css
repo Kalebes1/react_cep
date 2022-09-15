@@ -1,0 +1,33 @@
+*, *::before, *::after{
+    margin: 0;
+    padding:0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: #4C5C75;
+    --secondColor: #6F7275;
+    --textColor: #e5e7ec;
+    --hoverColor: #A0C1F7;
+
+    --transition: all 500ms ease;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--textColor);
+    overflow-x: hidden;
+}
+
+
+.container{
+    width: 80%;
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+  
